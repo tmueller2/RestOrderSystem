@@ -1,7 +1,7 @@
 <%-- 
     Document   : index
     Created on : Sep 4, 2012, 1:50:07 PM
-    Author     : Spark
+    Author     : Todd Mueller
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
