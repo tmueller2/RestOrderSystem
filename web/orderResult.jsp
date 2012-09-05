@@ -24,5 +24,8 @@
             }
             %>
         </p>
+        <h5>Thank you for your order!</h5>
+        <br />
+        <p><a href="orderForm.html">BACK</p>
     </body>
 </html>

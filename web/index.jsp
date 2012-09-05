@@ -13,6 +13,6 @@
     </head>
     <body>
         <h1>Welcome to Todd's Sweets & Creamery!</h1>
-        <p><a href="orderFoem.html">Click here to order</a></p>
+        <p><a href="orderForm.html">Click here to order</a></p>
     </body>
 </html>
