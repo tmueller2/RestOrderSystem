@@ -15,15 +15,17 @@ public class OrderData {
     public String getOrderInfo(String order){
         //List completeOrder = new ArrayList();
         String completeOrder;
-        
-        if(order.equals("sweet1")){
+        if (order == null){
+            completeOrder = "";
+        }
+        else if(order.equals("sweet1")){
             completeOrder = "Chocolate Chip Cookie";
         }
         else if(order.equals("cream1")) {
             completeOrder = "Monster Cookie Dough Ice Cream";
         }
         else{
-            completeOrder = "Nothing has been selected";
+            completeOrder = "";
         }
         return completeOrder;
     }

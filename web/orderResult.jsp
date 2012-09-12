@@ -16,16 +16,19 @@
     <body>
         <h1>Todd's Sweets & Creamery Order</h1>
         <p>
+        <fieldset>
+            <legend>ORDER</legend>
             <%
             List records = (List)request.getAttribute("itemsOrdered");
             Iterator it = records.iterator();
             while(it.hasNext()){
-                out.print(it.next());
+                out.print("<br>" + it.next());
             }
             %>
         </p>
         <h5>Thank you for your order!</h5>
         <br />
+        </fieldset>
         <p><a href="orderForm.html">BACK</p>
     </body>
 </html>

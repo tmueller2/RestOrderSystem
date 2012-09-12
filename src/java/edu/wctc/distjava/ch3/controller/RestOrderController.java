@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author Spark
  */
 public class RestOrderController extends HttpServlet {
-    private static final String RESULT_PAGE = "orderResult.jsp";
+    private static final String RESULT_PAGE = "/orderResult.jsp";
     
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
