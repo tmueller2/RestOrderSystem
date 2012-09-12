@@ -21,9 +21,15 @@ public class OrderData {
         else if(order.equals("sweet1")){
             completeOrder = "Chocolate Chip Cookie";
         }
+        else if (order.equals("sweet2")){
+            completeOrder = "Millie Vanillie Cheesecake Slice";
+        }
         else if(order.equals("cream1")) {
             completeOrder = "Monster Cookie Dough Ice Cream";
         }
+        else if(order.equals("cream2")) {
+            completeOrder = "Rum Chata Ice Cream";
+        }       
         else{
             completeOrder = "";
         }
