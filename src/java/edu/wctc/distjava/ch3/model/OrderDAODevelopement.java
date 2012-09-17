@@ -2,7 +2,7 @@
 package edu.wctc.distjava.ch3.model;
 
 import db.accessor.DBAccessor;
-import java.awt.MenuItem;
+import db.accessor.DB_Generic;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +24,10 @@ public class OrderDAODevelopement implements IOrderDAO {
     private static final String USER = "root";
     private static final String PWD = "admin";
     private static int orderCount = 0;    
+    
+    public OrderDAODevelopement(){
+        db = new DB_Generic();
+    }
 
     /**
      * This class gets the menu choices from the data base
@@ -31,7 +35,7 @@ public class OrderDAODevelopement implements IOrderDAO {
      * @throws RuntimeException 
      */
     @Override
-    public List<MenuItem> getCurrentMenuChoices() throws RuntimeException {
+    public List<java.awt.MenuItem> getCurrentMenuChoices() throws RuntimeException {
         List<MenuItem> items = new ArrayList<MenuItem>();
         try {
             //Open a connection to the data base
@@ -41,10 +45,10 @@ public class OrderDAODevelopement implements IOrderDAO {
             List<Map> rawData = db.findRecords(sql, true);
             for(Map record : rawData) {
                 MenuItem item = new MenuItem();
-                int id = Integer.valueOf(record.get("idmenuItem").toString());
+                int id = Integer.valueOf(record.get("idmenuItems").toString());
                 item.setId(id);
-                String name = String.valueOf(record.get("item_name"));
-                item.setItemName(name);
+                String description = String.valueOf(record.get("item_name"));
+                item.setMenuDescription(description);
                 items.add(item); 
             }            
             
@@ -60,8 +64,15 @@ public class OrderDAODevelopement implements IOrderDAO {
         return null;
     }
 
+    /**
     @Override
     public void saveOrder(List<MenuItem> orderList) throws RuntimeException {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+    */
+
+    @Override
+    public void saveOrder(List<java.awt.MenuItem> orderList) throws RuntimeException {
         throw new UnsupportedOperationException("Not supported yet.");
     }
     
