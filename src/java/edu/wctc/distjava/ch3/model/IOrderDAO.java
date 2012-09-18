@@ -1,12 +1,13 @@
 package edu.wctc.distjava.ch3.model;
 
-import java.awt.MenuItem;
+
 import java.util.List;
 
 /**
- * The general contract for all versions of OrderDAO classes.
+ * The general interface for all versions of OrderDAO classes.
  * 
- * @author jlombardo
+ * @author Todd Mueller
+ * @version 1.0
  */
 public interface IOrderDAO {
 

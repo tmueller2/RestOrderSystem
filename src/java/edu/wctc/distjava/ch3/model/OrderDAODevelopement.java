@@ -35,7 +35,7 @@ public class OrderDAODevelopement implements IOrderDAO {
      * @throws RuntimeException 
      */
     @Override
-    public List<java.awt.MenuItem> getCurrentMenuChoices() throws RuntimeException {
+    public List<MenuItem> getCurrentMenuChoices() throws RuntimeException {
         List<MenuItem> items = new ArrayList<MenuItem>();
         try {
             //Open a connection to the data base
@@ -47,7 +47,7 @@ public class OrderDAODevelopement implements IOrderDAO {
                 MenuItem item = new MenuItem();
                 int id = Integer.valueOf(record.get("idmenuItems").toString());
                 item.setId(id);
-                String description = String.valueOf(record.get("item_name"));
+                String description = String.valueOf(record.get("menuDescription"));
                 item.setMenuDescription(description);
                 items.add(item); 
             }            
@@ -72,8 +72,10 @@ public class OrderDAODevelopement implements IOrderDAO {
     */
 
     @Override
-    public void saveOrder(List<java.awt.MenuItem> orderList) throws RuntimeException {
+    public void saveOrder(List<MenuItem> orderList) throws RuntimeException {
         throw new UnsupportedOperationException("Not supported yet.");
     }
+
+
     
 }

@@ -11,8 +11,8 @@ import java.util.*;
  * @author jlombardo
  */
 public class OrderService {
-    private List<java.awt.MenuItem> menuList;
-    private List<java.awt.MenuItem> orderList;
+    private List<MenuItem> menuList;
+    private List<MenuItem> orderList;
     private IOrderDAO orderDao;
 
     public OrderService() {
@@ -23,26 +23,26 @@ public class OrderService {
         orderDao = new OrderDAODevelopement();
         //orderDao = new OrderDAOProduction();
         menuList = orderDao.getCurrentMenuChoices();
-        orderList = new ArrayList<java.awt.MenuItem>();
+        orderList = new ArrayList<MenuItem>();
     }
     
     public void placeOrder() {
         orderDao.saveOrder(orderList);
     }
 
-    public List<java.awt.MenuItem> getMenuList() {
+    public List<MenuItem> getMenuList() {
         return menuList;
     }
 
-    public void setMenuList(List<java.awt.MenuItem> menuList) {
+    public void setMenuList(List<MenuItem> menuList) {
         this.menuList = menuList;
     }
 
-    public List<java.awt.MenuItem> getOrderList() {
+    public List<MenuItem> getOrderList() {
         return orderList;
     }
 
-    public void setOrderList(List<java.awt.MenuItem> orderList) {
+    public void setOrderList(List<MenuItem> orderList) {
         this.orderList = orderList;
     }
 

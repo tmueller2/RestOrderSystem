@@ -9,9 +9,9 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <%-- The next 3 lines are used so the cache is earased
-             Then when you renun the program again it will display the new code
-        --%>
+        <!-- The next 3 lines are used so the cache is erased
+             Then when you rerun the program again it will display the new code
+        -->
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">         
