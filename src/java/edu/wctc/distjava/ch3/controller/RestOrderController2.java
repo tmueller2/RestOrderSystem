@@ -32,6 +32,14 @@ public class RestOrderController2 extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException{
+
+        List<MenuItem> menuList = orderService.getMenuList();
+        request.setAttribute("menuList", menuList);
+        
+        // Redirect to destination page
+        RequestDispatcher dispatcher = 
+                getServletContext().getRequestDispatcher("/orderForm.jsp");
+        dispatcher.forward(request, response);
         
     }
         

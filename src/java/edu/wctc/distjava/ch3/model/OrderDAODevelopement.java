@@ -61,7 +61,7 @@ public class OrderDAODevelopement implements IOrderDAO {
         }catch (Exception ex) {
             Logger.getLogger(OrderDAODevelopement.class.getName()).log(Level.SEVERE, null, ex);
         } 
-        return null;
+        return items;
     }
 
     /**

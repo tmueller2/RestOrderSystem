@@ -3,12 +3,25 @@
     Created on : Sep 18, 2012, 2:16:46 PM
     Author     : Todd Mueller
 --%>
+<%@page import="java.util.ArrayList"%>
 <%@page import="java.util.List"%>
 <%@page import="edu.wctc.distjava.ch3.model.MenuItem"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
-	List<MenuItem> menuList = (List<MenuItem>) request.getAttribute("menuList");
-	List<MenuItem> orderList = (List<MenuItem>) request.getAttribute("orderList");
+    List<MenuItem> menuList = new ArrayList<MenuItem>();
+    Object menuListObj = request.getAttribute("menuList");
+    if(menuListObj != null) {
+        menuList = (List<MenuItem>) menuListObj;
+    }
+    
+    List<MenuItem> orderList = new ArrayList<MenuItem>();
+    Object orderListObj = request.getAttribute("menuList");
+    if(orderListObj != null) {
+        orderList = (List<MenuItem>) orderListObj;
+    }
+    
+        //List<MenuItem> menuList = (List<MenuItem>) request.getAttribute("menuList");
+	//List<MenuItem> orderList = (List<MenuItem>) request.getAttribute("orderList");
 %>
 <!DOCTYPE html>
 <html>
