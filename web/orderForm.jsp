@@ -8,8 +8,10 @@
 <%@page import="edu.wctc.distjava.ch3.model.MenuItem"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
+    //Creates a menuList Object
     List<MenuItem> menuList = new ArrayList<MenuItem>();
     Object menuListObj = request.getAttribute("menuList");
+    //Checks to see if the menulist Oject not null to create menuList
     if(menuListObj != null) {
         menuList = (List<MenuItem>) menuListObj;
     }

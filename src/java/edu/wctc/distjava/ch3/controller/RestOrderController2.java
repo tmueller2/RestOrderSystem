@@ -32,7 +32,8 @@ public class RestOrderController2 extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException{
-
+        
+        //Creates the menu list when the page is first requested
         List<MenuItem> menuList = orderService.getMenuList();
         request.setAttribute("menuList", menuList);
         
