@@ -72,8 +72,35 @@ public class OrderDAODevelopement implements IOrderDAO {
     */
 
     @Override
-    public void saveOrder(List<MenuItem> orderList) throws RuntimeException {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public void saveOrder(List<MenuItem> orderList) throws RuntimeException, IllegalArgumentException {
+        
+        try {
+            //Create table
+            List colDescription = new ArrayList();
+            List colValues = new ArrayList();
+  
+             //Open DB connection
+             db.openConnection(OrderDAODevelopement.DRIVER,OrderDAODevelopement.URL,
+                        OrderDAODevelopement.USER, OrderDAODevelopement.PWD);
+            
+            for(MenuItem item : orderList){
+                //add to table description
+                colDescription.add("idMenuItems");
+                //add item ID from the item list
+                colValues.add(item.getId());
+                
+                //insert into DB order table
+                db.insertRecord("orderHistory", colDescription, colValues, false);
+                colDescription.clear();
+                colValues.clear();
+            }
+            db.closeConnection();
+        }
+        catch (SQLException ex) {
+            Logger.getLogger(OrderDAODevelopement.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (Exception ex) {
+            Logger.getLogger(OrderDAODevelopement.class.getName()).log(Level.SEVERE, null, ex);
+        }    
     }
 
 
